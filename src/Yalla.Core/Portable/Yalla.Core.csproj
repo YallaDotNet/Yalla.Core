@@ -38,11 +38,10 @@
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Properties\Yalla.Core.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
@@ -54,6 +53,7 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Log.cs</LastGenOutput>
     </None>
+    <None Include="Properties\Yalla.Core.snk" />
     <None Include="Yalla.t4" />
   </ItemGroup>
   <ItemGroup>

@@ -38,11 +38,10 @@
     <DocumentationFile>bin\Release\Yalla.Core.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
-    <SignAssembly>false</SignAssembly>
+    <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>
-    </AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\Portable\Properties\Yalla.Core.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
@@ -55,6 +54,9 @@
       <Link>Log.tt</Link>
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Log.cs</LastGenOutput>
+    </None>
+    <None Include="..\Portable\Properties\Yalla.Core.snk">
+      <Link>Properties\Yalla.Core.snk</Link>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
