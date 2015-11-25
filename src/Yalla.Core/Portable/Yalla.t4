@@ -1,0 +1,104 @@
+﻿<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#
+var maxArgCount = 4;
+var levels = new Dictionary<string, string>
+{
+	{"Trace", "trace"},
+	{"Debug", "debug"},
+	{"Info", "information"},
+	{"Warn", "warning"},
+	{"Error", "error"},
+	{"Fatal", "fatal error"},
+};
+
+foreach (var level in levels.Keys)
+{
+#>
+		#region <#= level #>
+
+<#
+	foreach (var formatProvider in new[] { false, true })
+	for (int i = 0; i < maxArgCount + 3; ++i)
+	foreach (var exception in new[] { false, true })
+	{
+		var message = i == 0;
+		var args = i == maxArgCount + 1;
+		var formatMessageCallback = i == maxArgCount + 2;
+
+		var paramTypes = new List<string>();
+		var paramNames = new List<string>();
+		var paramDocs = new List<string>();
+
+		if (formatProvider)
+		{
+			paramTypes.Add("IFormatProvider");
+			paramNames.Add("formatProvider");
+			paramDocs.Add("Format provider.");
+		}
+
+		if (formatMessageCallback)
+		{
+			paramTypes.Add("FormatMessageCallback");
+			paramNames.Add("formatMessageCallback");
+			paramDocs.Add("");
+		}
+		else if (message)
+		{
+			paramTypes.Add("object");
+			paramNames.Add("message");
+			paramDocs.Add("Message.");
+		}
+		else
+		{
+			paramTypes.Add("string");
+			paramNames.Add("format");
+			paramDocs.Add("Message format.");
+		}
+
+		if (exception)
+		{
+			paramTypes.Add("Exception");
+			paramNames.Add("exception");
+			paramDocs.Add("Exception.");
+		}
+
+		if (args)
+		{
+			paramTypes.Add("object[]");
+			paramNames.Add("args");
+			paramDocs.Add("Format arguments.");
+		}
+		else if (!formatMessageCallback)
+		{
+			for (int j = 0; j < i; ++j)
+			{
+				paramTypes.Add("object");
+				paramNames.Add("arg" + j.ToString());
+				paramDocs.Add("Format argument " + j + ".");
+			}
+		}
+
+		var method = level;
+		if (i > 0)
+			method += "Format";
+
+		var paramDefaults = new List<string>(new string[paramTypes.Count]);
+
+		paramTypes.Add("[CallerFilePath] string");
+		paramNames.Add("filePath");
+		paramDocs.Add("File path (populated by the compiler).");
+		paramDefaults.Add(" = null");
+
+		paramTypes.Add("[CallerMemberName] string");
+		paramNames.Add("memberName");
+		paramDocs.Add("Member name (populated by the compiler).");
+		paramDefaults.Add(" = null");
+
+		paramTypes.Add("[CallerLineNumber] int");
+		paramNames.Add("lineNumber");
+		paramDocs.Add("Line number (populated by the compiler).");
+		paramDefaults.Add(" = 0");
+
+		var paramList = string.Join(", ", Enumerable.Range(0, paramTypes.Count).Select(j => paramTypes[j] + " " + paramNames[j] + paramDefaults[j]));
+#>

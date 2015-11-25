@@ -1,0 +1,193 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ output extension=".cs" #>
+using System;
+using System.Runtime.CompilerServices;
+
+namespace Yalla
+{
+    /// <summary>
+    /// Log implementation.
+    /// </summary>
+    public sealed class Log : ILog
+    {
+		#region Fields
+
+        private readonly ILogger _logger;
+        private readonly ILogFormatter _formatter;
+
+		#endregion Fields
+
+		#region Constructor
+
+		/// <summary>
+		/// Creates a new instance of the <see cref="Yalla.Log"/> class.
+		/// </summary>
+        public Log(ILogger logger, ILogFormatter formatter)
+        {
+            this._logger = logger;
+            this._formatter = formatter;
+        }
+
+		#endregion Constructor
+
+		#region Finalizer
+
+        /// <summary>
+        /// Releases unmanaged resources and performs other cleanup operations before the <see cref="Yalla.Log"/>
+        /// is reclaimed by garbage collection.
+        /// </summary>
+        ~Log()
+        {
+            Dispose(false);
+        }
+
+		#endregion Finalizer
+
+		#region Dispose
+
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
+        public void Dispose()
+        {
+            Dispose(true);
+            GC.SuppressFinalize(this);
+        }
+
+        /// <summary>
+        /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+        /// </summary>
+		public void Dispose(bool disposing)
+		{
+			if (disposing)
+				Logger.Dispose();
+		}
+
+		#endregion Dispose
+
+<#@ include file="Yalla.t4" #>
+<#
+		var argList = string.Join(", ", paramNames.Except(new[] { "exception" }));
+		var doArgs = new List<string>();
+		doArgs.Add("formatProvider");
+		if (formatMessageCallback)
+			doArgs.Add("formatMessageCallback");
+		else
+			doArgs.Add("format");
+		if (exception)
+			doArgs.Add("exception");
+		if (!formatMessageCallback)
+			doArgs.Add("args");
+		doArgs.Add("caller");
+		var doArgList = string.Join(", ", doArgs);
+#>
+        /// <summary>
+        /// Logs a new <#= levels[level] #> entry.
+        /// </summary>
+<#
+		for (int j = 0; j < paramTypes.Count; ++j)
+		{
+#>
+        /// <param name="<#= paramNames[j] #>"><#= paramDocs[j] #></param>
+<#
+		}
+#>
+		public void <#= method #>(<#= paramList #>)
+		{
+			if (!Is<#= level #>Enabled)
+				return;
+<#
+		if (!formatProvider)
+		{
+#>
+			IFormatProvider formatProvider = null;
+<#
+		}
+		if (!formatMessageCallback)
+		{
+#>
+<#
+			if (message)
+			{
+#>
+<#
+			}
+			else
+			{
+				if (!args)
+				{
+#>
+			object[] args = new[] { <#= string.Join(", ", Enumerable.Range(0, i).Select(j => "arg" + j)) #> };
+<#
+				}
+#>
+			string message = string.Format(formatProvider, format, args);
+<#
+			}
+		}
+		else
+		{
+#>
+			string message = formatMessageCallback((format, arg) => string.Format(formatProvider, format, arg));
+<#
+		}
+		if (!exception)
+		{
+#>
+			Exception exception = null;
+<#
+		}
+#>
+			CallerInfo caller = GetCallerInfo(filePath, memberName, lineNumber);
+			LogEntry entry = new LogEntry(Logger.Name, LogLevel.<#= level #>, message, exception, caller);
+			string formattedMessage = Formatter.Format(formatProvider, entry);
+			Logger.Log(entry, formattedMessage, formatProvider);
+		}
+
+<#
+	}
+#>
+        /// <summary>
+        /// Gets a value indicating whether logging of <#= levels[level] #> entries is enabled.
+        /// </summary>
+        public bool Is<#= level #>Enabled
+		{
+			get { return Logger.IsEnabled(LogLevel.<#= level #>); }
+		}
+
+		#endregion <#= level #>
+
+<#
+}
+#>
+		#region Common Properties
+
+        /// <summary>
+        /// Internal logger instance.
+        /// </summary>
+		public ILogger Logger
+        {
+            get { return _logger; }
+        }
+
+        /// <summary>
+        /// Internal formatter instance.
+        /// </summary>
+		public ILogFormatter Formatter
+        {
+            get { return _formatter; }
+        }
+
+		#endregion Common Properties
+
+		#region Private Methods
+
+		private CallerInfo GetCallerInfo(string filePath, string memberName, int lineNumber)
+		{
+			return new CallerInfo(filePath, memberName, lineNumber);
+		}
+
+		#endregion Private Methods
+	}
+}

@@ -1,0 +1,55 @@
+﻿<#@ template debug="false" hostspecific="false" language="C#" #>
+<#@ assembly name="System.Core" #>
+<#@ output extension=".cs" #>
+using System;
+using System.Runtime.CompilerServices;
+
+namespace Yalla
+{
+    /// <summary>
+    /// Log interface.
+    /// </summary>
+    public interface ILog : IDisposable
+    {
+<#@ include file="Yalla.t4" #>
+        /// <summary>
+        /// Logs a new <#= levels[level] #> entry.
+        /// </summary>
+<#
+		for (int j = 0; j < paramTypes.Count; ++j)
+		{
+#>
+        /// <param name="<#= paramNames[j] #>"><#= paramDocs[j] #></param>
+<#
+		}
+#>
+		void <#= method #>(<#= paramList #>);
+
+<#
+	}
+#>
+        /// <summary>
+        /// Gets a value indicating whether logging of <#= levels[level] #> entries is enabled.
+        /// </summary>
+        bool Is<#= level #>Enabled { get; }
+
+		#endregion <#= level #>
+
+<#
+}
+#>
+		#region Common Properties
+
+        /// <summary>
+        /// Internal logger instance.
+        /// </summary>
+		ILogger Logger { get; }
+
+        /// <summary>
+        /// Internal formatter instance.
+        /// </summary>
+		ILogFormatter Formatter { get; }
+
+		#endregion Common Properties
+	}
+}
