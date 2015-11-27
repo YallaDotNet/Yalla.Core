@@ -19,7 +19,7 @@ namespace Yalla
         /// Gets a value indicating whether logging of entries of the specified level is enabled.
         /// </summary>
         /// <param name="logLevel">Log level.</param>
-        /// <return><c>true</c> if logging of entries of the specified level is enabled.</return>
+        /// <returns><c>true</c> if logging of entries of the specified level is enabled.</returns>
         bool IsEnabled(LogLevel logLevel);
 
         /// <summary>

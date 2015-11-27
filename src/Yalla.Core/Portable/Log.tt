@@ -23,6 +23,8 @@ namespace Yalla
 		/// <summary>
 		/// Initializes a new instance of the <see cref="Yalla.Log"/> class.
 		/// </summary>
+        /// <param name="logger">Logger.</param>
+        /// <param name="formatter">Log formatter.</param>
         public Log(ILogger logger, ILogFormatter formatter)
         {
             this._logger = logger;
@@ -151,6 +153,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of <#= levels[level] #> entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of <#= levels[level] #> entries is enabled.</value>
         public bool Is<#= level #>Enabled
 		{
 			get { return Logger.IsEnabled(LogLevel.<#= level #>); }

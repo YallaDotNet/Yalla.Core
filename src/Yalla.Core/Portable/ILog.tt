@@ -31,6 +31,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of <#= levels[level] #> entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of <#= levels[level] #> entries is enabled.</value>
         bool Is<#= level #>Enabled { get; }
 
 		#endregion <#= level #>
