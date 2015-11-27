@@ -79,6 +79,7 @@
     <Compile Include="LoggerFactoryAdapterBase.cs" />
     <Compile Include="LoggerSettings.cs" />
     <Compile Include="LogLevel.cs" />
+    <Compile Include="NamespaceDoc.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
