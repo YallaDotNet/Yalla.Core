@@ -41,7 +41,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Properties\Yalla.Core.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>Properties\Yalla.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
@@ -53,12 +53,14 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Log.cs</LastGenOutput>
     </None>
-    <None Include="Properties\Yalla.Core.snk" />
+    <None Include="Properties\Yalla.snk" />
     <None Include="Yalla.t4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallerInfo.cs" />
+    <Compile Include="DefaultFormatter.cs" />
     <Compile Include="FormatMessageCallback.cs" />
+    <Compile Include="FormatterBase.cs" />
     <Compile Include="IConfigurationSource.cs" />
     <Compile Include="ILog.cs">
       <AutoGen>True</AutoGen>
@@ -80,6 +82,8 @@
     <Compile Include="LoggerSettings.cs" />
     <Compile Include="LogLevel.cs" />
     <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="NoOpLogFactory.cs" />
+    <Compile Include="NoOpLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

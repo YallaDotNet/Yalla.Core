@@ -17,6 +17,11 @@ Supported Platforms
 * Xamarin.iOS
 * Portable Class Libraries
 
+Usage
+-----
+
+See the help file located in the doc directory.
+
 Notice
 ------
 
