@@ -6,8 +6,9 @@
     public class LoggerSettings
     {
         /// <summary>
-        /// Minimum log level.
+        /// Gets or sets the minimum log level.
         /// </summary>
+        /// <value>Minimum log level.</value>
         public LogLevel Level
         {
             get;

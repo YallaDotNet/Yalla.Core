@@ -8,7 +8,7 @@ namespace Yalla
     public sealed class CallerInfo
     {
         /// <summary>
-        /// Creates a new instance of <see cref="CallerInfo"/>.
+        /// Initializes a new instance of the <see cref="CallerInfo"/> class.
         /// </summary>
         /// <param name="filePath">File path.</param>
         /// <param name="memberName">Member name.</param>
@@ -21,8 +21,9 @@ namespace Yalla
         }
 
         /// <summary>
-        /// File path.
+        /// Gets the file path.
         /// </summary>
+        /// <value>File path.</value>
         public string FilePath
         {
             get;
@@ -30,8 +31,9 @@ namespace Yalla
         }
 
         /// <summary>
-        /// Member name.
+        /// Gets the member name.
         /// </summary>
+        /// <value>Member name.</value>
         public string MemberName
         {
             get;
@@ -39,8 +41,9 @@ namespace Yalla
         }
 
         /// <summary>
-        /// Line number.
+        /// Gets the line number.
         /// </summary>
+        /// <value>Line number.</value>
         public int LineNumber
         {
             get;
@@ -50,6 +53,7 @@ namespace Yalla
         /// <summary>
         /// Gets the hash code.
         /// </summary>
+        /// <returns>A hash code for the current object.</returns>
         public override int GetHashCode()
         {
             return FilePath != null

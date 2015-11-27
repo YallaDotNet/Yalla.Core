@@ -18,7 +18,7 @@ namespace Yalla
 		#region Constructor
 
 		/// <summary>
-		/// Creates a new instance of the <see cref="Yalla.Log"/> class.
+		/// Initializes a new instance of the <see cref="Yalla.Log"/> class.
 		/// </summary>
         public Log(ILogger logger, ILogFormatter formatter)
         {
@@ -3834,16 +3834,18 @@ namespace Yalla
 		#region Common Properties
 
         /// <summary>
-        /// Internal logger instance.
+        /// Gets the internal logger instance.
         /// </summary>
+        /// <value>Internal logger instance.</value>
 		public ILogger Logger
         {
             get { return _logger; }
         }
 
         /// <summary>
-        /// Internal formatter instance.
+        /// Gets the internal formatter instance.
         /// </summary>
+        /// <value>Internal formatter instance.</value>
 		public ILogFormatter Formatter
         {
             get { return _formatter; }

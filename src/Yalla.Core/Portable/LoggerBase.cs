@@ -55,11 +55,13 @@ namespace Yalla
         /// Gets a value indicating whether logging of entries of the specified level is enabled.
         /// </summary>
         /// <param name="logLevel">Log level.</param>
+        /// <return><c>true</c> if logging of entries of the specified level is enabled.</return>
         public abstract bool IsEnabled(LogLevel logLevel);
 
         /// <summary>
         /// Gets the name of the logger.
         /// </summary>
+        /// <value>The name of the logger.</value>
         public string Name
         {
             get { return _name; }
@@ -73,7 +75,7 @@ namespace Yalla
     public abstract class LoggerBase<TLevel> : LoggerBase
     {
         /// <summary>
-        /// Creates a new instance of the <see cref="Yalla.LoggerBase"/> class.
+        /// Initializes a new instance of the <see cref="Yalla.LoggerBase"/> class.
         /// </summary>
         /// <param name="name">The name of the logger.</param>
         protected LoggerBase(string name)
@@ -97,6 +99,7 @@ namespace Yalla
         /// Gets a value indicating whether logging of entries of the specified level is enabled.
         /// </summary>
         /// <param name="logLevel">Log level.</param>
+        /// <return><c>true</c> if logging of entries of the specified level is enabled.</return>
         public override bool IsEnabled(LogLevel logLevel)
         {
             if (!IsEnabled())
@@ -108,6 +111,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether this logger is enabled.
         /// </summary>
+        /// <return><c>true</c> if this logger is enabled.</return>
         protected virtual bool IsEnabled()
         {
             return true;
@@ -126,12 +130,14 @@ namespace Yalla
         /// Gets a value indicating whether logging of entries of the specified level is enabled.
         /// </summary>
         /// <param name="level">Log level.</param>
+        /// <return><c>true</c> if logging of entries of the specified level is enabled.</return>
         protected abstract bool IsEnabled(TLevel level);
 
         /// <summary>
         /// Gets the concrete log level.
         /// </summary>
         /// <param name="logLevel">Yalla log level.</param>
+        /// <returns>Log level.</returns>
         protected abstract TLevel GetLevel(LogLevel logLevel);
     }
 
@@ -160,6 +166,7 @@ namespace Yalla
         /// Gets a value indicating whether entries of the specified level or above should be logged.
         /// </summary>
         /// <param name="logLevel">The log level to check.</param>
+        /// <return><c>true</c> if entries of the specified level or above should be logged.</return>
         public override bool IsEnabled(LogLevel logLevel)
         {
             if (!IsEnabled() || logLevel < Level)
@@ -172,6 +179,7 @@ namespace Yalla
         /// Gets a value indicating whether this logger is enabled.
         /// </summary>
         /// <param name="level">Log level.</param>
+        /// <return><c>true</c> if this logger is enabled.</return>
         protected override bool IsEnabled(TLevel level)
         {
             return true;
@@ -180,6 +188,7 @@ namespace Yalla
         /// <summary>
         /// Gets the logger settings.
         /// </summary>
+        /// <value>Logger settings.</value>
         protected TSettings Settings
         {
             get { return _settings; }
@@ -188,6 +197,7 @@ namespace Yalla
         /// <summary>
         /// Gets the minimum enabled log level.
         /// </summary>
+        /// <value>Minimum enabled log level.</value>
         protected LogLevel Level
         {
             get { return Settings.Level; }

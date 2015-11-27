@@ -41,13 +41,15 @@ namespace Yalla
 		#region Common Properties
 
         /// <summary>
-        /// Internal logger instance.
+        /// Gets the internal logger instance.
         /// </summary>
+        /// <value>Internal logger instance.</value>
 		ILogger Logger { get; }
 
         /// <summary>
-        /// Internal formatter instance.
+        /// Gets the internal formatter instance.
         /// </summary>
+        /// <value>Internal formatter instance.</value>
 		ILogFormatter Formatter { get; }
 
 		#endregion Common Properties

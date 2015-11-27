@@ -23,12 +23,14 @@ namespace Yalla
         /// Gets a logger instance by name.
         /// </summary>
         /// <param name="name">The name of the logger.</param>
+        /// <returns>Logger.</returns>
         public abstract ILogger GetLogger(string name);
 
         /// <summary>
         /// Gets a logger instance by type.
         /// </summary>
         /// <param name="type">The type to create the logger for.</param>
+        /// <returns>Logger.</returns>
         public virtual ILogger GetLogger(Type type)
         {
             if (type == null)
@@ -46,14 +48,14 @@ namespace Yalla
         private TSettings _settings;
 
         /// <summary>
-        /// Creates a new instance of the <see cref="Yalla.LoggerFactoryAdapterBase"/> class.
+        /// Initializes a new instance of the <see cref="Yalla.LoggerFactoryAdapterBase"/> class.
         /// </summary>
         protected LoggerFactoryAdapterBase()
 	    {
 	    }
 
         /// <summary>
-        /// Creates a new instance of the <see cref="Yalla.LoggerFactoryAdapterBase"/> class.
+        /// Initializes a new instance of the <see cref="Yalla.LoggerFactoryAdapterBase"/> class.
         /// </summary>
         /// <param name="settings">Logger settings.</param>
         protected LoggerFactoryAdapterBase(TSettings settings)
@@ -64,6 +66,7 @@ namespace Yalla
         /// <summary>
         /// Gets or sets the logger settings.
         /// </summary>
+        /// <value>Logger settings.</value>
         public TSettings Settings
         {
             get
@@ -76,6 +79,7 @@ namespace Yalla
         /// <summary>
         /// Creates the logger settings.
         /// </summary>
+        /// <value>Logger settings.</value>
         protected virtual TSettings CreateSettings()
         {
             return new TSettings();

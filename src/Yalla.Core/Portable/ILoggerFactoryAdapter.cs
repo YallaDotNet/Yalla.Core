@@ -23,12 +23,14 @@ namespace Yalla
         /// Gets a logger instance by name.
         /// </summary>
         /// <param name="name">The name of the logger.</param>
+        /// <returns>Logger.</returns>
         ILogger GetLogger(string name);
 
         /// <summary>
         /// Gets a logger instance by type.
         /// </summary>
         /// <param name="type">The type to create the logger for.</param>
+        /// <returns>Logger.</returns>
         ILogger GetLogger(Type type);
     }
 }
