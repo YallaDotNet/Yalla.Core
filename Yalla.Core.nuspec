@@ -29,6 +29,10 @@
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
     <tags>portable pcl log logger logging library abstraction Yalla Yalla.NET Yalla.Core</tags>
     <dependencies>
+      <group targetFramework=".NETPortable0.0-net40+sl40+win+wp71">
+        <dependency id="Microsoft.Bcl" version="1.1.9" />
+      </group>
+      <group targetFramework=".NETPortable0.0-net45+win+wpa81+wp80+MonoAndroid10+xamarinios10+MonoTouch10" />
     </dependencies>
   </metadata>
   <files>
