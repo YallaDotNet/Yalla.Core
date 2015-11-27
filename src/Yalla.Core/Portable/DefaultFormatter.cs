@@ -24,10 +24,7 @@ namespace Yalla
             get { return _lazy.Value; }
         }
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DefaultFormatter"/> class.
-        /// </summary>
-        protected DefaultFormatter()
+        internal DefaultFormatter()
         {
         }
 
