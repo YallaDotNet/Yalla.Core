@@ -1,4 +1,4 @@
-![Build status](https://ci.appveyor.com/api/projects/status/8qlv4kmv38d3tkk8)
+[![Build status](https://ci.appveyor.com/api/projects/status/8qlv4kmv38d3tkk8)](https://ci.appveyor.com/project/dmitry-shechtman/yalla-core)
 
 Yalla.Core
 ==========
