@@ -59,6 +59,7 @@ namespace Yalla
         /// <summary>
         /// Initializes the logging system.
         /// </summary>
+        /// <param name="prologue">Prologue.</param>
         public void Initialize(string prologue)
         {
         }
@@ -66,6 +67,7 @@ namespace Yalla
         /// <summary>
         /// Terminates the logging system.
         /// </summary>
+        /// <param name="epilogue">Epilogue.</param>
         public void Shutdown(string epilogue)
         {
         }
