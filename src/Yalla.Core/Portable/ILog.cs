@@ -149,7 +149,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new trace entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -158,7 +158,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new trace entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -317,7 +317,7 @@ namespace Yalla
         /// Logs a new trace entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -327,7 +327,7 @@ namespace Yalla
         /// Logs a new trace entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -337,6 +337,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of trace entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of trace entries is enabled.</value>
         bool IsTraceEnabled { get; }
 
 		#endregion Trace
@@ -482,7 +483,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new debug entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -491,7 +492,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new debug entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -650,7 +651,7 @@ namespace Yalla
         /// Logs a new debug entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -660,7 +661,7 @@ namespace Yalla
         /// Logs a new debug entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -670,6 +671,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of debug entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of debug entries is enabled.</value>
         bool IsDebugEnabled { get; }
 
 		#endregion Debug
@@ -815,7 +817,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new information entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -824,7 +826,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new information entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -983,7 +985,7 @@ namespace Yalla
         /// Logs a new information entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -993,7 +995,7 @@ namespace Yalla
         /// Logs a new information entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -1003,6 +1005,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of information entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of information entries is enabled.</value>
         bool IsInfoEnabled { get; }
 
 		#endregion Info
@@ -1148,7 +1151,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new warning entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -1157,7 +1160,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new warning entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -1316,7 +1319,7 @@ namespace Yalla
         /// Logs a new warning entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -1326,7 +1329,7 @@ namespace Yalla
         /// Logs a new warning entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -1336,6 +1339,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of warning entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of warning entries is enabled.</value>
         bool IsWarnEnabled { get; }
 
 		#endregion Warn
@@ -1481,7 +1485,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new error entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -1490,7 +1494,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new error entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -1649,7 +1653,7 @@ namespace Yalla
         /// Logs a new error entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -1659,7 +1663,7 @@ namespace Yalla
         /// Logs a new error entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -1669,6 +1673,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of error entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of error entries is enabled.</value>
         bool IsErrorEnabled { get; }
 
 		#endregion Error
@@ -1814,7 +1819,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new fatal error entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -1823,7 +1828,7 @@ namespace Yalla
         /// <summary>
         /// Logs a new fatal error entry.
         /// </summary>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -1982,7 +1987,7 @@ namespace Yalla
         /// Logs a new fatal error entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
         /// <param name="lineNumber">Line number (populated by the compiler).</param>
@@ -1992,7 +1997,7 @@ namespace Yalla
         /// Logs a new fatal error entry.
         /// </summary>
         /// <param name="formatProvider">Format provider.</param>
-        /// <param name="formatMessageCallback"></param>
+        /// <param name="formatMessageCallback">Format message callback delegate.</param>
         /// <param name="exception">Exception.</param>
         /// <param name="filePath">File path (populated by the compiler).</param>
         /// <param name="memberName">Member name (populated by the compiler).</param>
@@ -2002,6 +2007,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether logging of fatal error entries is enabled.
         /// </summary>
+        /// <value><c>true</c> if logging of fatal error entries is enabled.</value>
         bool IsFatalEnabled { get; }
 
 		#endregion Fatal

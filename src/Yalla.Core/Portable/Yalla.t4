@@ -41,7 +41,7 @@ foreach (var level in levels.Keys)
 		{
 			paramTypes.Add("FormatMessageCallback");
 			paramNames.Add("formatMessageCallback");
-			paramDocs.Add("");
+			paramDocs.Add("Format message callback delegate.");
 		}
 		else if (message)
 		{

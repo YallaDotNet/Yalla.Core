@@ -55,7 +55,7 @@ namespace Yalla
         /// Gets a value indicating whether logging of entries of the specified level is enabled.
         /// </summary>
         /// <param name="logLevel">Log level.</param>
-        /// <return><c>true</c> if logging of entries of the specified level is enabled.</return>
+        /// <returns><c>true</c> if logging of entries of the specified level is enabled.</returns>
         public abstract bool IsEnabled(LogLevel logLevel);
 
         /// <summary>
@@ -99,7 +99,7 @@ namespace Yalla
         /// Gets a value indicating whether logging of entries of the specified level is enabled.
         /// </summary>
         /// <param name="logLevel">Log level.</param>
-        /// <return><c>true</c> if logging of entries of the specified level is enabled.</return>
+        /// <returns><c>true</c> if logging of entries of the specified level is enabled.</returns>
         public override bool IsEnabled(LogLevel logLevel)
         {
             if (!IsEnabled())
@@ -111,7 +111,7 @@ namespace Yalla
         /// <summary>
         /// Gets a value indicating whether this logger is enabled.
         /// </summary>
-        /// <return><c>true</c> if this logger is enabled.</return>
+        /// <returns><c>true</c> if this logger is enabled.</returns>
         protected virtual bool IsEnabled()
         {
             return true;
@@ -130,7 +130,7 @@ namespace Yalla
         /// Gets a value indicating whether logging of entries of the specified level is enabled.
         /// </summary>
         /// <param name="level">Log level.</param>
-        /// <return><c>true</c> if logging of entries of the specified level is enabled.</return>
+        /// <returns><c>true</c> if logging of entries of the specified level is enabled.</returns>
         protected abstract bool IsEnabled(TLevel level);
 
         /// <summary>
@@ -166,7 +166,7 @@ namespace Yalla
         /// Gets a value indicating whether entries of the specified level or above should be logged.
         /// </summary>
         /// <param name="logLevel">The log level to check.</param>
-        /// <return><c>true</c> if entries of the specified level or above should be logged.</return>
+        /// <returns><c>true</c> if entries of the specified level or above should be logged.</returns>
         public override bool IsEnabled(LogLevel logLevel)
         {
             if (!IsEnabled() || logLevel < Level)
@@ -179,7 +179,7 @@ namespace Yalla
         /// Gets a value indicating whether this logger is enabled.
         /// </summary>
         /// <param name="level">Log level.</param>
-        /// <return><c>true</c> if this logger is enabled.</return>
+        /// <returns><c>true</c> if this logger is enabled.</returns>
         protected override bool IsEnabled(TLevel level)
         {
             return true;

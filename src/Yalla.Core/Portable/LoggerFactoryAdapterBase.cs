@@ -42,6 +42,7 @@ namespace Yalla
     /// <summary>
     /// Base class for logger factory adapters.
     /// </summary>
+    /// <typeparam name="TSettings">Type of settings.</typeparam>
     public abstract class LoggerFactoryAdapterBase<TSettings> : LoggerFactoryAdapterBase
         where TSettings : class, new()
     {
@@ -79,7 +80,7 @@ namespace Yalla
         /// <summary>
         /// Creates the logger settings.
         /// </summary>
-        /// <value>Logger settings.</value>
+        /// <returns>Logger settings.</returns>
         protected virtual TSettings CreateSettings()
         {
             return new TSettings();
