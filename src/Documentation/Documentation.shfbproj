@@ -41,7 +41,7 @@
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>True</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>Yalla Core</HelpTitle>
+    <HelpTitle>Yalla Core Library</HelpTitle>
     <CopyrightText>Copyright &amp;#169%3b Dmitry Shechtman 2015</CopyrightText>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <DocumentationSources>
