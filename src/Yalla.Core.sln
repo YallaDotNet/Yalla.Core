@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Documentation", "Documentation\Documentation.shfbproj", "{A47F9581-AD60-43FF-B6FC-092DF5E20E3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,13 +30,17 @@ Global
 		{FDA9235E-4F0D-41FD-A877-156B907F5D06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FDA9235E-4F0D-41FD-A877-156B907F5D06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FDA9235E-4F0D-41FD-A877-156B907F5D06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A47F9581-AD60-43FF-B6FC-092DF5E20E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A47F9581-AD60-43FF-B6FC-092DF5E20E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A47F9581-AD60-43FF-B6FC-092DF5E20E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A47F9581-AD60-43FF-B6FC-092DF5E20E3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.0\lib\NET35;packages\Unity.Interception.2.1.505.0\lib\NET35;packages\EnterpriseLibrary.Common.5.0.505.0\lib\NET35;packages\EnterpriseLibrary.Logging.5.0.505.1\lib\NET35
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.Logging.6.0.1304.0\lib\NET45
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Yalla.Log4Net\Net45\Yalla.Log4Net.Net45.csproj
