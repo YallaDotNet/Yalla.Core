@@ -6,9 +6,9 @@
     <title>Yalla.Core</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
-    <summary>Yet Another Logging Library Abstraction for .NET - Core</summary>
+    <summary>Yet Another Logging Library Abstraction for .NET (Core Library)</summary>
     <description>
-      Yet Another Logging Library Abstraction for .NET - Core.
+      Yet Another Logging Library Abstraction for .NET (Core Library).
 
       Supported Platforms:
 

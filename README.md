@@ -3,7 +3,7 @@
 Yalla.Core
 ==========
 
-Yet Another Logging Library Abstraction for .NET
+Yet Another Logging Library Abstraction for .NET (Core Library)
 
 Supported Platforms
 -------------------
