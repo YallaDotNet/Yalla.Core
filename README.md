@@ -1,9 +1,9 @@
-![Build status](https://ci.appveyor.com/api/projects/status/8qlv4kmv38d3tkk8)
+[![Build status](https://ci.appveyor.com/api/projects/status/8qlv4kmv38d3tkk8)](https://ci.appveyor.com/project/dmitry-shechtman/yalla-core)
 
 Yalla.Core
 ==========
 
-Yet Another Logging Library Abstraction for .NET
+Yet Another Logging Library Abstraction for .NET (Core Library)
 
 Supported Platforms
 -------------------
