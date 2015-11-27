@@ -58,7 +58,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CallerInfo.cs" />
+    <Compile Include="DefaultFormatter.cs" />
     <Compile Include="FormatMessageCallback.cs" />
+    <Compile Include="FormatterBase.cs" />
     <Compile Include="IConfigurationSource.cs" />
     <Compile Include="ILog.cs">
       <AutoGen>True</AutoGen>
@@ -80,6 +82,8 @@
     <Compile Include="LoggerSettings.cs" />
     <Compile Include="LogLevel.cs" />
     <Compile Include="NamespaceDoc.cs" />
+    <Compile Include="NoOpLogFactory.cs" />
+    <Compile Include="NoOpLogger.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

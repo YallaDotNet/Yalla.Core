@@ -64,8 +64,14 @@
     <Compile Include="..\Portable\CallerInfo.cs">
       <Link>CallerInfo.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\DefaultFormatter.cs">
+      <Link>DefaultFormatter.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\FormatMessageCallback.cs">
       <Link>FormatMessageCallback.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\FormatterBase.cs">
+      <Link>FormatterBase.cs</Link>
     </Compile>
     <Compile Include="..\Portable\IConfigurationSource.cs">
       <Link>IConfigurationSource.cs</Link>
@@ -111,6 +117,12 @@
     </Compile>
     <Compile Include="..\Portable\NamespaceDoc.cs">
       <Link>NamespaceDoc.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\NoOpLogFactory.cs">
+      <Link>NoOpLogFactory.cs</Link>
+    </Compile>
+    <Compile Include="..\Portable\NoOpLogger.cs">
+      <Link>NoOpLogger.cs</Link>
     </Compile>
     <Compile Include="..\Portable\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
