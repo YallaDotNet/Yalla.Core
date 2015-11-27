@@ -23,7 +23,7 @@
     </description>
     <releaseNotes>Initial (pre)release.</releaseNotes>
     <language>en-US</language>
-    <projectUrl>https://YallaDotNet.github.io/Yalla.Core/</projectUrl>
+    <projectUrl>http://yalladotnet.github.io/Yalla.Core/</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
