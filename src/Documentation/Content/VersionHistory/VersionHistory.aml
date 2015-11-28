@@ -11,7 +11,12 @@
 				<para>Select a version below to see a description of its changes.</para>
 
 				<definitionTable>
-          
+
+          <definedTerm>
+            <link xlink:href="0e7501ae-e056-41d2-9369-e8f604d85fc0" />
+          </definedTerm>
+          <definition>Updated Microsoft.Bcl to 1.1.10.</definition>
+
           <definedTerm>
             <link xlink:href="10f555cf-6c7c-42cd-a340-57bdf8a04b42" />
           </definedTerm>

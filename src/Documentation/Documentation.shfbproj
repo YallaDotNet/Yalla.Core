@@ -32,7 +32,7 @@
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
-    <HelpFileVersion>0.1.0</HelpFileVersion>
+    <HelpFileVersion>0.1.2</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -77,6 +77,7 @@
     <None Include="Content\License.aml" />
     <None Include="Content\VersionHistory\0.1.0.aml" />
     <None Include="Content\VersionHistory\0.1.1.aml" />
+    <None Include="Content\VersionHistory\0.1.2.aml" />
     <None Include="Content\VersionHistory\VersionHistory.aml" />
     <None Include="Content\Welcome.aml" />
   </ItemGroup>
