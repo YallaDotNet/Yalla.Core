@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<topic id="10f555cf-6c7c-42cd-a340-57bdf8a04b42" revisionNumber="1">
+  <developerConceptualDocument
+    xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+
+    <introduction>
+      <para>
+        Version 0.1.1 was released on November 28 2015.
+      </para>
+    </introduction>
+
+    <section>
+      <title>Changes in This Release</title>
+      <content>
+
+        <list class="bullet">
+          
+          <listItem>
+            <para>Fixed dependencies.</para>
+          </listItem>
+          <listItem>
+            <para>Documentation fixes.</para>
+          </listItem>
+
+        </list>
+
+      </content>
+    </section>
+
+    <relatedTopics>
+      <link xlink:href="b71d6332-cce6-4854-96a8-3577be788ceb" />
+    </relatedTopics>
+
+  </developerConceptualDocument>
+</topic>

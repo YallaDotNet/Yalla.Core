@@ -11,10 +11,18 @@
 				<para>Select a version below to see a description of its changes.</para>
 
 				<definitionTable>
-					<definedTerm>
+          
+          <definedTerm>
+            <link xlink:href="10f555cf-6c7c-42cd-a340-57bdf8a04b42" />
+          </definedTerm>
+          <definition>Fixed dependencies.</definition>
+          <definition>Documentation fixes.</definition>
+          
+          <definedTerm>
 						<link xlink:href="4e7aaeec-3b96-49d0-af4c-7cbf74b4b576" />
 					</definedTerm>
           <definition>Initial (pre)release.</definition>
+          
 				</definitionTable>
 
 			</content>
