@@ -1,9 +1,10 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/8qlv4kmv38d3tkk8)](https://ci.appveyor.com/project/dmitry-shechtman/yalla-core)
 
-Yalla.Core
-==========
+YALLA Core Library
+==================
 
-Yet Another Logging Library Abstraction for .NET (Core Library)
+YALLA is Yet Another Logging Library Abstraction for .NET. This is the YALLA Core Library.
+
 
 Supported Platforms
 -------------------
@@ -15,12 +16,15 @@ Supported Platforms
 * Windows Phone Silverlight 8
 * Xamarin.Android
 * Xamarin.iOS
+* Xamarin.OSX
 * Portable Class Libraries
 
-Usage
------
 
-See documentation located in the `doc` directory. The latest version is available at http://yalladotnet.github.io/Yalla.Core/
+Getting Started
+---------------
+
+The latest documentation is available at <http://yalladotnet.github.io/Yalla.Core>.
+
 
 Notice
 ------
