@@ -18,14 +18,14 @@ namespace Yalla
         void Shutdown();
 
         /// <summary>
-        /// Retrieves or creates a named log.
+        /// Retrieves or creates a log by name.
         /// </summary>
         /// <param name="name">The name of the log to retrieve.</param>
         /// <returns>Log.</returns>
         ILog GetLogger(string name);
 
         /// <summary>
-        /// Retrieves or creates a named log.
+        /// Retrieves or creates a log by type.
         /// </summary>
         /// <param name="type">The type to retrieve the log for.</param>
         /// <returns>Log.</returns>
