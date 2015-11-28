@@ -1,30 +1,154 @@
 <?xml version="1.0" encoding="utf-8"?>
 <topic id="3d2cf4e7-408f-455f-89ca-9d7f0cbeaad8" revisionNumber="1">
 	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
-
+    
     <section>
       <title>Introduction</title>
       <content>
-        Yet Another Logging Library Abstraction for .NET.
+        <para>YALLA is Yet Another Logging Library Abstraction for .NET.</para>
+        <para>
+          <mediaLink>
+            <image xlink:href="Yalla" placement="center" />
+            <caption lead="Figure 1" placement="after">Deployment diagram</caption>
+          </mediaLink>
+        </para>
+        <para>
+          <alert class="note">
+            <legacyBold>This is the YALLA Core Library documentation,</legacyBold>
+            which details the YALLA Logging API.
+            For YALLA Application API please refer to the primary
+            <externalLink>
+              <linkUri>http://yalladotnet.github.io/Yalla</linkUri>
+              <linkText>YALLA documentation</linkText>
+            </externalLink>.
+          </alert>
+        </para>
       </content>
     </section>
 
     <section>
       <title>Supported Platforms</title>
       <content>
-        <list class="bullet">
-          <listItem>.NET Framework 4</listItem>
-          <listItem>Silverlight 5</listItem>
-          <listItem>Windows 8</listItem>
-          <listItem>Windows Phone 8.1</listItem>
-          <listItem>Windows Phone Silverlight 8</listItem>
-          <listItem>Xamarin.Android</listItem>
-          <listItem>Xamarin.iOS</listItem>
-          <listItem>Portable Class Libraries</listItem>
-        </list>
+        <para>
+          <list class="bullet">
+
+            <listItem>.NET Framework 4</listItem>
+
+            <listItem>Silverlight 5</listItem>
+
+            <listItem>
+              Windows 8 <legacyItalic>(WIP)</legacyItalic>
+            </listItem>
+
+            <listItem>
+              Windows Phone 8.1 <legacyItalic>(WIP)</legacyItalic>
+            </listItem>
+
+            <listItem>
+              Windows Phone Silverlight 8 <legacyItalic>(WIP)</legacyItalic>
+            </listItem>
+
+            <listItem>
+              Xamarin.Android <legacyItalic>(WIP)</legacyItalic>
+            </listItem>
+
+            <listItem>
+              Xamarin.iOS <legacyItalic>(WIP)</legacyItalic>
+            </listItem>
+
+            <listItem>
+              Xamarin.OSX <legacyItalic>(WIP)</legacyItalic>
+            </listItem>
+
+            <listItem>Portable Class Libraries</listItem>
+
+          </list>
+          <alert class="note">
+            <para>
+              <legacyBold>This is a preliminary release with limited functionality.</legacyBold>
+              .NET Framework 4 (or later), Silverlight 5 and Portable Class Libraries are currently the only supported platforms.
+            </para>
+          </alert>
+        </para>
       </content>
     </section>
 
+    <section>
+      <title>Getting Started</title>
+      <content>
+
+        <para>
+          As shown in Figure 1 above, YALLA supports a variety of use cases, which include the following:
+          <list class="ordered">
+            <listItem>
+              <para>
+                <newTerm>Application Code Input:</newTerm>
+                Your application code either requires the addition of logging functionality, or offers logging functionality that requires modification.
+              </para>
+            </listItem>
+            <listItem>
+              <para>
+                <newTerm>Library Code Input:</newTerm>
+                Your library code either requires the addition of logging functionality, or offers logging functionality that requires modification.
+              </para>
+            </listItem>
+            <listItem>
+              <para>
+                <newTerm>Platform Facility Output:</newTerm>
+                Your application or library code requires logging functionality with one or more platform-specific facility outputs.
+              </para>
+            </listItem>
+          </list>
+          <alert class="note">
+            <para>
+              <legacyBold>This is a preliminary release with limited functionality.</legacyBold>
+              <legacyItalic>Application Code Input</legacyItalic>, <legacyItalic>Library Code Input</legacyItalic> and <legacyItalic>Platform Facility Output</legacyItalic>
+              are the only use cases that are currently supported.
+            </para>
+          </alert>
+        </para>
+
+        <para>
+          You only need to add the YALLA Core Library as a dependency to your project in order to apply the
+          <legacyItalic>Application Code Input</legacyItalic>
+          use case or the
+          <legacyItalic>Library Code Input</legacyItalic>
+          use case.
+          For all other use cases (e.g. producing YALLA log(s) in your application) please refer to the primary
+          <externalLink>
+            <linkUri>http://yalladotnet.github.io/Yalla</linkUri>
+            <linkText>YALLA documentation</linkText>
+          </externalLink>.
+        </para>
+
+        <para>
+          In order to use YALLA in your application or library,
+          you need to add the YALLA Core Library as a dependency to your project(s).
+          If you haven't already, install the
+          <externalLink>
+            <linkUri>https://www.nuget.org/packages/Yalla.Core</linkUri>
+            <linkText>Yalla.Core NuGet package</linkText>
+          </externalLink>.
+          The current version is <link xlink:href="fa38469e-efca-45a4-8787-7517ca164790" />.
+        </para>
+
+        <para>
+          <codeEntityReference>T:Yalla.ILogFactory</codeEntityReference> is the focal point of YALLA Logging API.
+          If you are developing a library, you should expose an API that would allow its consumer to specify an
+          <codeEntityReference>T:Yalla.ILogFactory</codeEntityReference> instance during initialization.
+          You may provide fallback functionality by getting the
+          <codeEntityReference qualifyHint="true">P:Yalla.NoOpLogFactory.Instance</codeEntityReference>.
+        </para>
+
+        <para>
+          A call to <codeEntityReference>M:Yalla.ILogFactory.GetLogger(System.Type)</codeEntityReference> will return the <codeEntityReference>T:Yalla.ILog</codeEntityReference> for the specified type.
+          A call to <codeEntityReference>M:Yalla.ILogFactory.GetLogger(System.String)</codeEntityReference> will return the <codeEntityReference>T:Yalla.ILog</codeEntityReference> for the specified category.
+          Please refer to the <codeEntityReference>T:Yalla.ILog</codeEntityReference> type reference for YALLA Logging API details.
+        </para>
+        
+      </content>
+    </section>
+    
     <section>
       <title>Notice</title>
       <content>
@@ -48,7 +172,11 @@
     </section>
 
 		<relatedTopics>
-			<link xlink:href="b71d6332-cce6-4854-96a8-3577be788ceb" />
+      <externalLink>
+        <linkUri>https://github.com/YallaDotNet/Yalla.Core</linkUri>
+        <linkText>Source Code</linkText>
+      </externalLink>
+      <link xlink:href="b71d6332-cce6-4854-96a8-3577be788ceb" />
 		</relatedTopics>
     
 	</developerConceptualDocument>

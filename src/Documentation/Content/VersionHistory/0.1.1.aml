@@ -17,10 +17,10 @@
         <list class="bullet">
           
           <listItem>
-            <para>Fixed dependencies.</para>
+            <para>Fixed dependencies</para>
           </listItem>
           <listItem>
-            <para>Documentation fixes.</para>
+            <para>Documentation fixes</para>
           </listItem>
 
         </list>

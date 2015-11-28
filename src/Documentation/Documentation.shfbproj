@@ -32,7 +32,7 @@
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
-    <HelpFileVersion>0.1.2</HelpFileVersion>
+    <HelpFileVersion>0.1.3</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -41,7 +41,7 @@
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>True</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>Yalla Core Library</HelpTitle>
+    <HelpTitle>YALLA Core Library</HelpTitle>
     <CopyrightText>Copyright &amp;#169%3b Dmitry Shechtman 2015</CopyrightText>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <DocumentationSources>
@@ -74,10 +74,14 @@
     <Folder Include="media" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\..\..\Yalla\Yalla.svg">
+      <Link>media\Yalla.svg</Link>
+    </None>
     <None Include="Content\License.aml" />
     <None Include="Content\VersionHistory\0.1.0.aml" />
     <None Include="Content\VersionHistory\0.1.1.aml" />
     <None Include="Content\VersionHistory\0.1.2.aml" />
+    <None Include="Content\VersionHistory\0.1.3.aml" />
     <None Include="Content\VersionHistory\VersionHistory.aml" />
     <None Include="Content\Welcome.aml" />
   </ItemGroup>
@@ -93,6 +97,12 @@
       <Project>{25fd586a-b4e6-4dbe-8b88-80a3611b6fd3}</Project>
       <Private>True</Private>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="media\Yalla.png">
+      <ImageId>Yalla</ImageId>
+      <AlternateText>Deployment diagram</AlternateText>
+    </Image>
   </ItemGroup>
   <!-- Import the SHFB build targets -->
   <Import Project="$(SHFBROOT)\SandcastleHelpFileBuilder.targets" />
