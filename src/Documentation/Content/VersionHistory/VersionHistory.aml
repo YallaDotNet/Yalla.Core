@@ -2,7 +2,7 @@
 <topic id="b71d6332-cce6-4854-96a8-3577be788ceb" revisionNumber="1">
   <developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
     <introduction>
-      <para>The topics in this section describe the various changes made to the YALLA Core Library over the life of the project.</para>
+      <para>The topics in this section describe the various changes made to the YALLA.NET Core over the life of the project.</para>
     </introduction>
 
     <section>
@@ -12,6 +12,17 @@
 
         <sections>
 
+          <section>
+            <title>
+              <link xlink:href="f604b11f-c817-45e8-a357-b51e19db40e6" />
+            </title>
+            <content>
+              <list class="bullet">
+                <listItem>A slight rebranding</listItem>
+              </list>
+            </content>
+          </section>
+          
           <section>
             <title>
               <link xlink:href="fa38469e-efca-45a4-8787-7517ca164790" />

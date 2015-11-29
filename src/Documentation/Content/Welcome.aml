@@ -5,7 +5,7 @@
     <section>
       <title>Introduction</title>
       <content>
-        <para>YALLA is Yet Another Logging Library Abstraction for .NET.</para>
+        <para>YALLA.NET is Yet Another Logging Library Abstraction for .NET.</para>
         <para>
           <mediaLink>
             <image xlink:href="Yalla" placement="center" />
@@ -14,12 +14,17 @@
         </para>
         <para>
           <alert class="note">
-            <legacyBold>This is the YALLA Core Library documentation,</legacyBold>
-            which details the YALLA Logging API.
-            For YALLA Application API please refer to the primary
+            <legacyBold>This is the YALLA.NET Core documentation,</legacyBold>
+            which details the YALLA.NET Logging API.
+            For YALLA.NET Application API please refer to the primary
             <externalLink>
               <linkUri>http://yalladotnet.github.io/Yalla</linkUri>
-              <linkText>YALLA documentation</linkText>
+              <linkText>YALLA.NET documentation</linkText>
+            </externalLink>.
+            For the node.js library please refer to
+            <externalLink>
+              <linkUri>https://github.com/kessler/node-yalla</linkUri>
+              <linkText>https://github.com/kessler/node-yalla</linkText>
             </externalLink>.
           </alert>
         </para>
@@ -78,7 +83,7 @@
       <content>
 
         <para>
-          As shown in Figure 1 above, YALLA supports a variety of use cases, which include the following:
+          As shown in Figure 1 above, YALLA.NET supports a variety of use cases, which include the following:
           <list class="ordered">
             <listItem>
               <para>
@@ -109,31 +114,31 @@
         </para>
 
         <para>
-          You only need to add the YALLA Core Library as a dependency to your project in order to apply the
+          You only need to add the YALLA.NET Core as a dependency to your project in order to apply the
           <legacyItalic>Application Code Input</legacyItalic>
           use case or the
           <legacyItalic>Library Code Input</legacyItalic>
           use case.
-          For all other use cases (e.g. producing YALLA log(s) in your application) please refer to the primary
+          For all other use cases (e.g. producing YALLA.NET log(s) in your application) please refer to the primary
           <externalLink>
             <linkUri>http://yalladotnet.github.io/Yalla</linkUri>
-            <linkText>YALLA documentation</linkText>
+            <linkText>YALLA.NET documentation</linkText>
           </externalLink>.
         </para>
 
         <para>
-          In order to use YALLA in your application or library,
-          you need to add the YALLA Core Library as a dependency to your project(s).
+          In order to use YALLA.NET in your application or library,
+          you need to add the YALLA.NET Core as a dependency to your project(s).
           If you haven't already, install the
           <externalLink>
             <linkUri>https://www.nuget.org/packages/Yalla.Core</linkUri>
             <linkText>Yalla.Core NuGet package</linkText>
           </externalLink>.
-          The current version is <link xlink:href="fa38469e-efca-45a4-8787-7517ca164790" />.
+          The current version is <link xlink:href="f604b11f-c817-45e8-a357-b51e19db40e6" />.
         </para>
 
         <para>
-          <codeEntityReference>T:Yalla.ILogFactory</codeEntityReference> is the focal point of YALLA Logging API.
+          <codeEntityReference>T:Yalla.ILogFactory</codeEntityReference> is the focal point of YALLA.NET Logging API.
           If you are developing a library, you should expose an API that would allow its consumer to specify an
           <codeEntityReference>T:Yalla.ILogFactory</codeEntityReference> instance during initialization.
           You may provide fallback functionality by getting the
@@ -143,7 +148,7 @@
         <para>
           A call to <codeEntityReference>M:Yalla.ILogFactory.GetLogger(System.Type)</codeEntityReference> will return the <codeEntityReference>T:Yalla.ILog</codeEntityReference> for the specified type.
           A call to <codeEntityReference>M:Yalla.ILogFactory.GetLogger(System.String)</codeEntityReference> will return the <codeEntityReference>T:Yalla.ILog</codeEntityReference> for the specified category.
-          Please refer to the <codeEntityReference>T:Yalla.ILog</codeEntityReference> type reference for YALLA Logging API details.
+          Please refer to the <codeEntityReference>T:Yalla.ILog</codeEntityReference> type reference for YALLA.NET Logging API details.
         </para>
         
       </content>

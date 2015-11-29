@@ -1,14 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="3d2cf4e7-408f-455f-89ca-9d7f0cbeaad8" visible="True" isDefault="true" isSelected="true" apiParentMode="InsertAfter" title="Welcome to the YALLA Core Library" tocTitle="Welcome">
+  <Topic id="3d2cf4e7-408f-455f-89ca-9d7f0cbeaad8" visible="True" isDefault="true" isSelected="true" apiParentMode="InsertAfter" title="Welcome to the YALLA.NET Core" tocTitle="Welcome">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>
   </Topic>
-  <Topic id="b71d6332-cce6-4854-96a8-3577be788ceb" visible="True" isExpanded="true" title="Version History">
+  <Topic id="b71d6332-cce6-4854-96a8-3577be788ceb" visible="True" title="Version History">
     <HelpKeywords>
       <HelpKeyword index="K" term="version, history" />
     </HelpKeywords>
+    <Topic id="f604b11f-c817-45e8-a357-b51e19db40e6" visible="True" title="Version 0.2.0">
+      <HelpKeywords>
+        <HelpKeyword index="K" term="version,0.2.0" />
+      </HelpKeywords>
+    </Topic>
     <Topic id="fa38469e-efca-45a4-8787-7517ca164790" visible="True" title="Version 0.1.3">
       <HelpKeywords>
         <HelpKeyword index="K" term="version,0.1.3" />

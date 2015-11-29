@@ -32,7 +32,7 @@
     <KeepLogFile>True</KeepLogFile>
     <DisableCodeBlockComponent>False</DisableCodeBlockComponent>
     <CleanIntermediates>True</CleanIntermediates>
-    <HelpFileVersion>0.1.3</HelpFileVersion>
+    <HelpFileVersion>0.2.0</HelpFileVersion>
     <MaximumGroupParts>2</MaximumGroupParts>
     <NamespaceGrouping>False</NamespaceGrouping>
     <SyntaxFilters>Standard</SyntaxFilters>
@@ -41,7 +41,7 @@
     <PresentationStyle>VS2013</PresentationStyle>
     <Preliminary>True</Preliminary>
     <NamingMethod>Guid</NamingMethod>
-    <HelpTitle>YALLA Core Library</HelpTitle>
+    <HelpTitle>YALLA.NET Core</HelpTitle>
     <CopyrightText>Copyright &amp;#169%3b Dmitry Shechtman 2015</CopyrightText>
     <ContentPlacement>AboveNamespaces</ContentPlacement>
     <DocumentationSources>
@@ -83,6 +83,7 @@
     <None Include="Content\VersionHistory\0.1.1.aml" />
     <None Include="Content\VersionHistory\0.1.2.aml" />
     <None Include="Content\VersionHistory\0.1.3.aml" />
+    <None Include="Content\VersionHistory\0.2.0.aml" />
     <None Include="Content\VersionHistory\VersionHistory.aml" />
     <None Include="Content\Welcome.aml" />
   </ItemGroup>
@@ -93,6 +94,11 @@
     <Content Include="icons\Help.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Yalla.Core\Portable.Net40\Yalla.Core.Portable.Net40.csproj">
+      <Name>Yalla.Core.Portable.Net40</Name>
+      <Project>{fda9235e-4f0d-41fd-a877-156b907f5d06}</Project>
+      <Private>True</Private>
+    </ProjectReference>
     <ProjectReference Include="..\Yalla.Core\Portable\Yalla.Core.csproj">
       <Name>Yalla.Core</Name>
       <Project>{25fd586a-b4e6-4dbe-8b88-80a3611b6fd3}</Project>

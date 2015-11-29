@@ -1,9 +1,9 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/8qlv4kmv38d3tkk8)](https://ci.appveyor.com/project/dmitry-shechtman/yalla-core)
 
-YALLA Core Library
-==================
+YALLA.NET Core
+==============
 
-YALLA is Yet Another Logging Library Abstraction for .NET. This is the YALLA Core Library.
+YALLA.NET is Yet Another Logging Library Abstraction for .NET. This is the YALLA.NET Core.
 
 
 Supported Platforms

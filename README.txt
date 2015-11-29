@@ -1,7 +1,7 @@
-YALLA Core Library
-==================
+YALLA.NET Core
+==============
 
-YALLA is Yet Another Logging Library Abstraction for .NET. This is the YALLA Core Library.
+YALLA.NET is Yet Another Logging Library Abstraction for .NET. This is the YALLA.NET Core.
 
 
 Getting Started
