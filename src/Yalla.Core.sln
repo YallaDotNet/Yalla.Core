@@ -23,6 +23,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{3E8B43EE-CBBA-4899-B0C4-8B5315AFDEBE}"
 	ProjectSection(SolutionItems) = preProject
 		Properties\Yalla.snk = Properties\Yalla.snk
+		Properties\YallaAssemblyInfo.cs = Properties\YallaAssemblyInfo.cs
 	EndProjectSection
 EndProject
 Global

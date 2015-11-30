@@ -56,6 +56,9 @@
     <None Include="..\..\Properties\Yalla.snk">
       <Link>Properties\Yalla.snk</Link>
     </None>
+    <Compile Include="..\..\Properties\YallaAssemblyInfo.cs">
+      <Link>Properties\YallaAssemblyInfo.cs</Link>
+    </Compile>
     <None Include="Yalla.t4" />
   </ItemGroup>
   <ItemGroup>

@@ -124,6 +124,9 @@
     <Compile Include="..\Portable\NamespaceDoc.cs">
       <Link>NamespaceDoc.cs</Link>
     </Compile>
+    <Compile Include="..\..\Properties\YallaAssemblyInfo.cs">
+      <Link>Properties\YallaAssemblyInfo.cs</Link>
+    </Compile>
     <Compile Include="..\Portable\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
