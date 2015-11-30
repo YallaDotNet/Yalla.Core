@@ -41,7 +41,7 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>Properties\Yalla.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>..\..\Properties\Yalla.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
@@ -53,7 +53,9 @@
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Log.cs</LastGenOutput>
     </None>
-    <None Include="Properties\Yalla.snk" />
+    <None Include="..\..\Properties\Yalla.snk">
+      <Link>Properties\Yalla.snk</Link>
+    </None>
     <None Include="Yalla.t4" />
   </ItemGroup>
   <ItemGroup>
