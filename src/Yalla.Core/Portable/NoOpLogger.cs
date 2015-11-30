@@ -4,16 +4,13 @@ namespace Yalla
 {
     class NoOpLogger : LoggerBase
     {
-        private static readonly Lazy<NoOpLogger> _lazy;
-
         static NoOpLogger()
         {
-            _lazy = new Lazy<NoOpLogger>(() => new NoOpLogger());
         }
 
         public static NoOpLogger Instance
         {
-            get { return _lazy.Value; }
+            get { return Singleton<NoOpLogger>.Instance; }
         }
 
         private NoOpLogger()
@@ -34,25 +31,11 @@ namespace Yalla
     /// <summary>
     /// No-op logger factory adapter.
     /// </summary>
-    public class NoOpLoggerFactoryAdapter : ILoggerFactoryAdapter
+    public class NoOpLoggerFactoryAdapter : Singleton<NoOpLoggerFactoryAdapter>, ILoggerFactoryAdapter
     {
-        private static readonly Lazy<NoOpLoggerFactoryAdapter> _lazy;
-
-        static NoOpLoggerFactoryAdapter()
-        {
-            _lazy = new Lazy<NoOpLoggerFactoryAdapter>(() => new NoOpLoggerFactoryAdapter());
-        }
-
-        /// <summary>
-        /// Gets an instance of the <see cref="Yalla.NoOpLoggerFactoryAdapter"/> class.
-        /// </summary>
-        /// <value>The instance.</value>
-        public static NoOpLoggerFactoryAdapter Instance
-        {
-            get { return _lazy.Value; }
-        }
 
         private NoOpLoggerFactoryAdapter()
+            : base(null)
         {
         }
 

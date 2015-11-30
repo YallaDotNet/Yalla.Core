@@ -45,6 +45,8 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
+    <Compile Include="Internal\Utilities.cs" />
+    <Compile Include="Singleton.cs" />
     <None Include="ILog.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>ILog.cs</LastGenOutput>

@@ -8,20 +8,13 @@ namespace Yalla
     /// </summary>
     public class DefaultFormatter : FormatterBase
     {
-        private static readonly Lazy<DefaultFormatter> _lazy;
-
-        static DefaultFormatter()
-        {
-            _lazy = new Lazy<DefaultFormatter>(() => new DefaultFormatter());
-        }
-
         /// <summary>
         /// Gets an instance of the <see cref="Yalla.DefaultFormatter"/> class.
         /// </summary>
         /// <value>The instance.</value>
         public static DefaultFormatter Instance
         {
-            get { return _lazy.Value; }
+            get { return Singleton<DefaultFormatter>.Instance; }
         }
 
         internal DefaultFormatter()

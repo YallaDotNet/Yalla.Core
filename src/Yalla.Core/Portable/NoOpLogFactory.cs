@@ -5,27 +5,16 @@ namespace Yalla
     /// <summary>
     /// No-op log factory.
     /// </summary>
-    public class NoOpLogFactory : ILogFactory
+    public class NoOpLogFactory : Singleton<NoOpLogFactory>, ILogFactory
     {
-        private static readonly Lazy<NoOpLogFactory> _lazy;
-
         static NoOpLogFactory()
         {
-            _lazy = new Lazy<NoOpLogFactory>(() => new NoOpLogFactory());
-        }
-
-        /// <summary>
-        /// Gets an instance of the <see cref="Yalla.NoOpLogFactory"/> class.
-        /// </summary>
-        /// <value>The instance.</value>
-        public static NoOpLogFactory Instance
-        {
-            get { return _lazy.Value; }
         }
 
         private readonly Log log;
 
         private NoOpLogFactory()
+            : base(null)
         {
             this.log = new Log(NoOpLogger.Instance, DefaultFormatter.Instance);
         }

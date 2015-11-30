@@ -8,7 +8,7 @@
     <ProjectGuid>{FDA9235E-4F0D-41FD-A877-156B907F5D06}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Yalla.Core</RootNamespace>
+    <RootNamespace>Yalla</RootNamespace>
     <AssemblyName>Yalla.Core</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
@@ -130,6 +130,10 @@
     <Compile Include="..\Portable\Properties\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
     </Compile>
+    <Compile Include="..\Portable\Singleton.cs">
+      <Link>Singleton.cs</Link>
+    </Compile>
+    <Compile Include="Internal\Utilities.cs" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
