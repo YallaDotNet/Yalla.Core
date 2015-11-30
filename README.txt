@@ -7,9 +7,7 @@ YALLA.NET is Yet Another Logging Library Abstraction for .NET. This is the YALLA
 Getting Started
 ---------------
 
-The latest documentation is available at <http://yalladotnet.github.io/Yalla.Core>.
-
-A version-specific offline copy is located in packages/Yalla.Core.X.Y.Z/doc/ (replace X.Y.Z with your version number).
+The latest documentation is available at <http://yalladotnet.github.io/Yalla>.
 
 
 Notice

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>Yalla.Core</id>
-    <version>0.2.0-pre</version>
+    <version>0.3.0-pre</version>
     <title>YALLA.NET Core</title>
     <authors>Dmitry Shechtman</authors>
     <owners>Dmitry Shechtman</owners>
@@ -22,9 +22,9 @@
       * Xamarin.OSX
       * Portable Class Libraries
     </description>
-    <releaseNotes>A slight rebranding</releaseNotes>
+    <releaseNotes>Consolidated documentation</releaseNotes>
     <language>en-US</language>
-    <projectUrl>http://yalladotnet.github.io/Yalla.Core</projectUrl>
+    <projectUrl>http://yalladotnet.github.io/Yalla</projectUrl>
     <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <copyright>Copyright © Dmitry Shechtman 2014-2015</copyright>
@@ -44,6 +44,5 @@
     <file src="README.txt" />
     <file src="LICENSE" />
     <file src="NOTICE" />
-    <file src="doc\Yalla.Core.chm" target="doc" />
   </files>
 </package>

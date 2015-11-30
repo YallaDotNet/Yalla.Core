@@ -23,7 +23,7 @@ Supported Platforms
 Getting Started
 ---------------
 
-The latest documentation is available at <http://yalladotnet.github.io/Yalla.Core>.
+The latest documentation is available at <http://yalladotnet.github.io/Yalla>.
 
 
 Notice
