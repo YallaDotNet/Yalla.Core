@@ -26,6 +26,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", 
 		Properties\YallaAssemblyInfo.cs = Properties\YallaAssemblyInfo.cs
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yalla.Core.Net40", "Yalla.Core\Net40\Yalla.Core.Net40.csproj", "{DDA7C68A-0E72-4E0A-80AF-88F189A6B9D8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{FDA9235E-4F0D-41FD-A877-156B907F5D06}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A47F9581-AD60-43FF-B6FC-092DF5E20E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A47F9581-AD60-43FF-B6FC-092DF5E20E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA7C68A-0E72-4E0A-80AF-88F189A6B9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DDA7C68A-0E72-4E0A-80AF-88F189A6B9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DDA7C68A-0E72-4E0A-80AF-88F189A6B9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DDA7C68A-0E72-4E0A-80AF-88F189A6B9D8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
