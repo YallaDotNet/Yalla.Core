@@ -6,8 +6,8 @@ var levels = new Dictionary<string, string>
 {
 	{"Trace", "trace"},
 	{"Debug", "debug"},
-	{"Info", "information"},
-	{"Warn", "warning"},
+	{"Info",  "information"},
+	{"Warn",  "warning"},
 	{"Error", "error"},
 	{"Fatal", "fatal error"},
 };
@@ -29,6 +29,13 @@ foreach (var level in levels.Keys)
 		var paramTypes = new List<string>();
 		var paramNames = new List<string>();
 		var paramDocs = new List<string>();
+
+		if (exception)
+		{
+			paramTypes.Add("Exception");
+			paramNames.Add("exception");
+			paramDocs.Add("Exception.");
+		}
 
 		if (formatProvider)
 		{
@@ -54,13 +61,6 @@ foreach (var level in levels.Keys)
 			paramTypes.Add("string");
 			paramNames.Add("format");
 			paramDocs.Add("Message format.");
-		}
-
-		if (exception)
-		{
-			paramTypes.Add("Exception");
-			paramNames.Add("exception");
-			paramDocs.Add("Exception.");
 		}
 
 		if (args)
